@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.epam.RPCprotocols.pingpong";
+option java_outer_classname = "PingPongProto";
+
+package pingpong;
+
+service PingPongService {
+  rpc SendPingPong (PingPongRequest) returns (PingPongReply) {}
+}
+
+message PingPongRequest {
+  string message = 1;
+}
+
+message PingPongReply {
+  string message = 1;
+}
